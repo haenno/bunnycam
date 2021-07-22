@@ -1,0 +1,11 @@
+[Unit] 
+Description=Bunnycam Log Deamon
+After=multi-user.target
+
+[Service]
+Type=idle
+User=pi
+ExecStart=/usr/bin/python3 /home/pi/bunnycam/bunnycamlog.py
+
+[Install]
+WantedBy=multi-user.target
